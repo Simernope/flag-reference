@@ -12,7 +12,7 @@ const CountriesList: FC = () => {
     const page = searchParams.get('page') || '1'
 
     const filteredCountries = countries.filter((country) => {
-        return ((country.name.official.toLowerCase().indexOf(countryName) !== -1) &&
+        return ((country.name.official.toLowerCase().indexOf(countryName.toLowerCase()) !== -1) &&
             (
                 filteredByRegion && filteredByRegion !== 'All' ?
                     filteredByRegion === country.region
